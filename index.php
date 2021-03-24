@@ -5,7 +5,7 @@ include('./config.php');
 
 
 
-$url = isset($_GET['url']) ? explode('/', $_GET['url'])[0] : 'dashboard';
+$url = isset($_GET['url']) ? explode('/', $_GET['url'])[0] : 'home';
 
 
 include('./src/components/header-seo.php');

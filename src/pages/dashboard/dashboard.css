@@ -18,12 +18,15 @@
 
 .main-container {
     background-color: #e7e7e7;
-    min-height: 100vh;
-    padding: 8px;
-    padding-top: 60px;
     width: calc(100% - 258px);
+    height: calc(100vh - 52px);
+    margin-top: 52px;
     float: right;
     clear: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 8px;
 }
 
 /* Header */
@@ -164,8 +167,6 @@ header {
 }
 .container {
     padding: 8px;
-    margin-bottom: 10px;
-    border-radius: 5px;
     -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
     -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
@@ -173,11 +174,15 @@ header {
 }
 
 .container-group-2 {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+    height: 48%;
+    margin: auto 0;
 }
 .container-group-2 .container {
-    width: 50%;
+    width: 100%
 }
 
 .left {
@@ -190,57 +195,69 @@ header {
 /* CHAT */
 
 .chat {
-    width: 95%;
-    margin: 0 auto;
-    margin-bottom: 20px;
-    height: 400px;
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 1fr 5fr;
     border-collapse: collapse;
+    height: 50%;
+    width: 100%
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
 }
 
 .users {
-    background-color: #233044;
+    background-color: #f9f9f9;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .user-single {
     padding: 8px 16px;
-    font-size: 18px;
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     align-items: center;
-    color: white;
-    border-bottom: 1px solid #ccc;
+    color: black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .notify {
-    width: 15px;
-    height: 15px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
 }
 .on {
-    background-color: aqua;
+    background-color: #757d89;
 }
 .select {
-    background-color: rgba(0, 0, 0, 0.14);
+    background-color: #d3d3d3;
 }
 
 .container-msg {
-    background-color: white;
+    background-color: #f9f9f9;
     width: 100%;
     overflow-y: auto;
+    height: 100%;
     padding: 8px;
-    border-top: 1px solid rgba(0, 0, 0, 0.14);
-    border-right: 1px solid rgba(0, 0, 0, 0.14);
+}
+
+.container-header {
+    background-color: #f9f9f9;
+}
+
+.container-header p {
+    color: black;
+    padding: 8px;
+    font-weight: bold;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
 .msg {
     margin: 2px 0;
-}
-
-.msg p {
-    max-width: 300px;
-    word-wrap: break-word;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    max-width: 80%;
+    text-align: justify;
 }
 
 .container-msg::-webkit-scrollbar {
@@ -253,14 +270,14 @@ header {
 .container-chat {
     display: flex;
     flex-direction: column;
-    height: 400px;
+    height: 100%;
 }
 .chat-input {
     width: 100%;
-    display: grid;
-    grid-template-columns: 9fr 1fr;
+    display: flex;
     padding: 8px 16px;
-    background-color: #1e2a38;
+    background-color: #f9f9f9;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
 }
 .chat-input textarea {
     font-size: 16px;
@@ -268,7 +285,7 @@ header {
     border: none;
     padding: 8px;
     width: 100%;
-    background-color: #ccc;
+    background-color: #d3d3d3;
     border-radius: 10px 0 0 10px;
     max-height: 111px;
 }
@@ -276,7 +293,8 @@ header {
     border: none;
     font-size: 12px;
     width: 100%;
-    background-color: #ccc;
+    max-width: 40px;
+    background-color: #d3d3d3;
     border-radius: 0 10px 10px 0;
 }
 .noOverflow {
@@ -288,7 +306,7 @@ header {
 .send {
     float: left;
     clear: both;
-    background-color: aqua;
+    background-color: rgb(99, 108, 126);
     padding: 8px;
     border-radius: 5px;
 }
@@ -296,7 +314,23 @@ header {
 .received {
     float: right;
     clear: both;
-    background-color: greenyellow;
+    background-color: rgb(58, 95, 3);
     padding: 8px;
     border-radius: 5px;
+}
+
+.user-single svg {
+    width: 14px;
+}
+
+@media screen and (max-width: 1080px) {
+    .aside-container {
+        display: none;
+    }
+    .main-container {
+        width: 100%;
+    }
+    .header-container {
+        width: 100%;
+    }
 }

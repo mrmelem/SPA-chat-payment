@@ -15,7 +15,6 @@ $(() => {
             });
             $('#header-page').html(page)
         }
-        console.log(page)
     }
 
     $('.nav').click(function () {

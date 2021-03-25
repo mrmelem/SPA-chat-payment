@@ -80,7 +80,7 @@ body {
 .overflow {
     overflow: auto;
 }
-.send {
+.received {
     float: left;
     clear: both;
     background-color: aqua;
@@ -88,7 +88,7 @@ body {
     border-radius: 5px;
 }
 
-.received {
+.send {
     float: right;
     clear: both;
     background-color: greenyellow;
@@ -203,7 +203,5 @@ footer a{
 }
 
 @media screen and (max-width: 1080px){
-    .chat{
-        display: none;
-    }
+
 }

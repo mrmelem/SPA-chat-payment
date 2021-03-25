@@ -4,6 +4,15 @@ $(() => {
         event.preventDefault()
         sendMessage()
     })
+
+    $(document).keypress(function (e) {
+        if (e.which === 13) {
+            event.preventDefault()
+            sendMessage()
+        }
+    })
+
+
     function sendMessage() {
         let msg = $('#input-msg').val();
         if (msg !== '') {
@@ -15,12 +24,34 @@ $(() => {
         $('#input-msg').val('');
     }
 
-    $(document).keypress(function (e) {
-        if (e.which === 13) {
-            event.preventDefault()
-            sendMessage()
+    function receivedMessage(msg) {
+        $('.chat-container-message').append(`<div class="received msg"><p>` + msg + `</p></div>`)
+    }
+
+    connect()
+    function connect() {
+
+        var socket = io('http://localhost:5000')
+        var token = {
+            id: '0000000001',
+            src: 'admin'
         }
-    })
+        socket.emit('auth', token)
+        socket.on('Initial', data => {
+            receivedMessage(data.msg);
+        })
+
+        /*
+        var User = {
+            name: 'Pedro',
+            email: 'melemredes@gmail.com',
+            src: 'client'
+        }
+
+        socket.emit('setUser', User)
+        */
+    }
+
 
 })
 

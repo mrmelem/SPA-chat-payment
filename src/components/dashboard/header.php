@@ -1,8 +1,6 @@
 <header>
     <div class="header-content">
-        <div class="user">
-            <i class="fa fa-user"></i>
-        </div>
+        <h1 id="header-page"></h1>
         <div class="loggout">
             <i class="fas fa-sign-out-alt"></i>
         </div>

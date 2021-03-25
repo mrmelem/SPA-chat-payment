@@ -1,18 +1,12 @@
 <link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAGES ?>home/home.css">
 
-<script src="<?php echo INCLUDE_PATH_PAGES ?>home/home.js"></script>
-<script src="<?php echo INCLUDE_PATH_PAGES ?>home/chat-home.js"></script>
 
 <div class="chat">
-    <div class="chat-icon">
-        <i class="fas fa-comment"></i>
-    </div>
-
     <div class="chat-container">
+        <div class="chat-title">
+            <b>Chat</b>
+        </div>
         <div class="content">
-            <div class="chat-title">
-                <b>Chat</b>
-            </div>
             <div class="chat-container-message" id="chat"></div>
             <form>
                 <div class="chat-input">
@@ -23,3 +17,39 @@
         </div>
     </div>
 </div>
+
+<div class="home-content">
+    <main>
+        <nav>
+            <div class="center">
+                <div class="logo">
+                    <img src="<?php echo INCLUDE_PATH ?>src/assets/logo.jfif" alt="Simpliart">
+                </div>
+            </div>
+        </nav>
+        <section class="main-banner">
+            <div class="main-content">
+                <p>
+                    <span class="typed-text"></span>
+                    <span class="cursor"></span>
+                </p>
+                <div class="icons">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-btn center-1080">
+            <p>Voltar ao topo</p>
+            <a href="<?php echo INCLUDE_PATH?>login">Login</a>
+        </div>
+        <p>Todos os direitos reservados!</p>
+        <p class="ad">Site desenvolvido por <a href="#">Pedro Melém</a></p>
+    </footer>
+</div>
+
+<script src="<?php echo INCLUDE_PATH_PAGES ?>home/tWritter.js"></script>
+<script src="<?php echo INCLUDE_PATH_PAGES ?>home/home.js"></script>
+<script src="<?php echo INCLUDE_PATH_PAGES ?>home/chat-home.js"></script>

@@ -1,56 +1,56 @@
 $(() => {
 
+    var socket = io('http://localhost:5000')
+    var user = { src: 'admin' }
+
     $('form').on('submit', function () {
         event.preventDefault()
-        sendMessage()
+        let msg = $('#input-msg').val()
+        send(msg)
     })
 
     $(document).keypress(function (e) {
         if (e.which === 13) {
             event.preventDefault()
-            sendMessage()
+            let msg = $('#input-msg').val()
+            send(msg)
         }
     })
 
-
-    function sendMessage() {
-        let msg = $('#input-msg').val();
+    function message(msg, from = null) {
         if (msg !== '') {
-            var el = $(".container-msg")
+            let className
+            if (from) {
+                className = "send"
+            } else {
+                className = "received"
+            }
+            $('.container-msg').append(`<div class="${className} msg"><p>${msg}</p></div>`)
+            $('#input-msg').val('');
+            var el = $("#chat")
             var height = el.prop('scrollHeight')
             el.animate({ scrollTop: height }, '0');
-            $('.container-msg').append(`<div class="received msg"><p>` + msg + `</p></div>`)
         }
-        $('#input-msg').val('');
     }
 
-    function receivedMessage(msg) {
-        $('.chat-container-message').append(`<div class="received msg"><p>` + msg + `</p></div>`)
+
+    function send(msg) {
+        let data = {
+            from: 'client',
+            msg: msg
+        }
+        socket.emit('sendMessage_client', data)
+        message(msg)
     }
 
-    connect()
-    function connect() {
+    socket.emit('auth', user)
 
-        var socket = io('http://localhost:5000')
-        var token = {
-            id: '0000000001',
-            src: 'admin'
-        }
-        socket.emit('auth', token)
-        socket.on('Initial', data => {
-            receivedMessage(data.msg);
-        })
+    socket.on('receivedMessage', data => {
+        message(data.message, 'client')
+    })
 
-        /*
-        var User = {
-            name: 'Pedro',
-            email: 'melemredes@gmail.com',
-            src: 'client'
-        }
 
-        socket.emit('setUser', User)
-        */
-    }
+
 
 
 })
@@ -71,6 +71,16 @@ function auto_grow(element) {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

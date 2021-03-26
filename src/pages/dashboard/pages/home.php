@@ -12,23 +12,16 @@
     <div class="users">
         <div class="user-single select">
             <div class="notify on"></div>
-            <p>Pedro</p>
+            <p class="token"></p>
             <svg height="26px" width="26px" viewBox="-4 -4 24 24">
                 <line stroke="black" stroke-linecap="round" stroke-width="2" x1="2" x2="14" y1="2" y2="14"></line>
                 <line stroke="black" stroke-linecap="round" stroke-width="2" x1="2" x2="14" y1="14" y2="2"></line>
             </svg>
         </div>
-        <div class="user-single">
-            <div class="notify"></div>
-            <p>José</p>
-        </div>
     </div>
     <div class="container-chat">
         <div class="container-header"></div>
-        <div class="container-msg">
-            <div class="msg send"><p>Teste</p></div>
-            <div class="msg received"><p>Teste</p></div>
-        </div>
+        <div class="container-msg"></div>
         <form>
             <div class="chat-input">
                 <textarea placeholder="Digite sua mensagem..." class="noOverflow" id="input-msg" cols="60" rows="1" onkeypress="auto_grow(this)" onkeyup="auto_grow(this)"></textarea>

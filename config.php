@@ -1,10 +1,12 @@
 <?php
 
 
+session_start();
+
 function MyAutoLoad($class)
 {
-    if (file_exists('./src/class/' . $class . '.php')) {
-        include('./src/class/' . $class . '.php');
+    if (file_exists('./src/public/class/' . $class . '.php')) {
+        include('./src/public/class/' . $class . '.php');
     } else {
         die('Classe ' . $class . ' não encontrada');
     }

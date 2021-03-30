@@ -1,5 +1,4 @@
-<link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAGES ?>login/login.css">
-<script src="<?php echo INCLUDE_PATH_PAGES ?>login/login.js"></script>
+<link rel="stylesheet" href="<?php echo PUBLIC_STYLES ?>login.css">
 
 <section class="login">
     <div class="form">
@@ -35,3 +34,5 @@
         </form>
     </div>
 </section>
+
+<script src="<?php echo PUBLIC_SCRIPTS ?>login.js"></script>

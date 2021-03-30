@@ -2,19 +2,43 @@
 
 include('./bin/keys.php');
 include('./config.php');
+$_SESSION['login'] = true;
 
-
-
-$url = isset($_GET['url']) ? explode('/', $_GET['url'])[0] : 'home';
-
-
-include('./src/components/header-seo.php');
-include('./src/components/header-default.php');
-
-if (file_exists('./src/pages/' . $url . '/' . $url . '.php')) {
-    include('./src/pages/' . $url . '/' . $url . '.php');
+include('src/public/components/defaults/header.php');
+if (isset($_GET['url'])) {
+    $get = explode('/', $_GET['url']);
+    $url = $get[0];
+    if (count($get) > 1) {
+        $context = $get[1];
+    }
 } else {
-    include('./src/components/error01.php');
+    $url = 'home';
 }
 
-include('./src/components/footer-default.php');
+if ($url == 'dashboard') {
+    if (@$_SESSION['login']) {
+        if (isset($context)) {
+            if (file_exists('src/admin/views/' . $context . '/index.php')) {
+                include('src/admin/views/' . $context . '/index.php');
+            } else {
+                echo "Erro";
+            }
+        } else {
+            if (file_exists('src/admin/views/index.php')) {
+                include('src/admin/views/index.php');
+            } else {
+                echo "Erro";
+            }
+        }
+    } else {
+        echo "Teste";
+        header('Location:' . INCLUDE_PATH . 'login');
+    }
+} else  {
+    if (file_exists('src/public/views/' . $url . '/index.php')) {
+        include('src/public/views/' . $url . '/index.php');
+    }else{
+        header('Location:' . INCLUDE_PATH);
+    }
+}
+include('src/public/components/defaults/footer.php');

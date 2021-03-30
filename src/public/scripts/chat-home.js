@@ -1,6 +1,6 @@
 $(() => {
 
-    var socket = io('http://localhost:5000')
+    var socket = io('192.168.1.100:5000')
     var user = { src: 'client' }
 
     $('form').on('submit', function () {

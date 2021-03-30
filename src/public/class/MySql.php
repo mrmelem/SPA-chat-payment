@@ -1,9 +1,9 @@
 <?php
 
-class Sql
+class MySql
 {
     private static $pdo;
-
+    
     public static function conectar()
     {
         if (self::$pdo == null) {
@@ -16,5 +16,11 @@ class Sql
         }
 
         return self::$pdo;
+    }
+
+    public static function selectAll($table){
+        $pdo = MySql::conectar()->prepare("SELECT * FROM `".$table."`");
+        $pdo->execute();
+        return $pdo->fetchAll();
     }
 }

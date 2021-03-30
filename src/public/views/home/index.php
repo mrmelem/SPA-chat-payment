@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo INCLUDE_PATH_PAGES ?>home/home.css">
+<link rel="stylesheet" href="<?php echo PUBLIC_STYLES ?>home.css">
 
 
 <div class="chat">
@@ -23,7 +23,7 @@
         <nav>
             <div class="center">
                 <div class="logo">
-                    <img src="<?php echo INCLUDE_PATH ?>src/assets/logo.jfif" alt="Simpliart">
+                    <img src="<?php echo INCLUDE_PATH ?>src/public/assets/logo.jfif" alt="Simpliart">
                 </div>
             </div>
         </nav>
@@ -43,13 +43,13 @@
     <footer>
         <div class="footer-btn center-1080">
             <p>Voltar ao topo</p>
-            <a href="<?php echo INCLUDE_PATH?>login">Login</a>
+            <a href="<?php echo INCLUDE_PATH ?>login">Login</a>
         </div>
         <p>Todos os direitos reservados!</p>
         <p class="ad">Site desenvolvido por <a href="#">Pedro Melém</a></p>
     </footer>
 </div>
 
-<script src="<?php echo INCLUDE_PATH_PAGES ?>home/tWritter.js"></script>
-<script src="<?php echo INCLUDE_PATH_PAGES ?>home/home.js"></script>
-<script src="<?php echo INCLUDE_PATH_PAGES ?>home/chat-home.js"></script>
+<script src="<?php echo PUBLIC_SCRIPTS ?>tWritter.js"></script>
+<script src="<?php echo PUBLIC_SCRIPTS ?>home.js"></script>
+<script src="<?php echo PUBLIC_SCRIPTS ?>chat-home.js"></script>

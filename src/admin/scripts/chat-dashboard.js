@@ -2,7 +2,7 @@ $(() => {
 
     var socket = io('http://localhost:5000')
     var user = { src: 'admin' }
-
+/*
     $('form').on('submit', function () {
         event.preventDefault()
         let msg = $('#input-msg').val()
@@ -52,7 +52,7 @@ $(() => {
 
 
 
-
+*/
 })
 
 function auto_grow(element) {

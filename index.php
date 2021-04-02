@@ -4,7 +4,7 @@ include('./bin/keys.php');
 include('./config.php');
 $_SESSION['login'] = true;
 
-include('src/public/components/defaults/header.php');
+
 if (isset($_GET['url'])) {
     $get = explode('/', $_GET['url']);
     $url = $get[0];
@@ -15,6 +15,8 @@ if (isset($_GET['url'])) {
     $url = 'home';
 }
 
+
+include('src/public/components/defaults/header.php');
 if ($url == 'dashboard') {
     if (@$_SESSION['login']) {
         if (isset($context)) {
@@ -24,8 +26,8 @@ if ($url == 'dashboard') {
                 echo "Erro";
             }
         } else {
-            if (file_exists('src/admin/views/index.php')) {
-                include('src/admin/views/index.php');
+            if (file_exists('src/admin/views/home/index.php')) {
+                include('src/admin/views/home/index.php');
             } else {
                 echo "Erro";
             }
@@ -34,10 +36,21 @@ if ($url == 'dashboard') {
         echo "Teste";
         header('Location:' . INCLUDE_PATH . 'login');
     }
-} else  {
+} else  if ($url == 'orders') {
+    if (isset($context)) {
+        if (System::checkOrder($context)) {
+            include('src/public/views/orders/index.php');
+        } else {
+            header('Location:' . INCLUDE_PATH);
+        }
+    } else {
+        header('Location:' . INCLUDE_PATH);
+    }
+} else {
+
     if (file_exists('src/public/views/' . $url . '/index.php')) {
         include('src/public/views/' . $url . '/index.php');
-    }else{
+    } else {
         header('Location:' . INCLUDE_PATH);
     }
 }

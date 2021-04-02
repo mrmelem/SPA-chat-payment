@@ -1,0 +1,232 @@
+main .container {
+    padding: 16px;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
+    -moz-box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.14);
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+}
+main .container h1 {
+    margin-bottom: 16px;
+}
+main .content {
+    display: flex;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.w50 {
+    width: 100%;
+}
+.btn {
+    text-align: center;
+}
+.text {
+    flex-direction: column;
+}
+/* INPUTS */
+button,
+input[type="submit"],
+.btn-new{
+    text-decoration: none;
+    background-color: #3498db;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 18px;
+    border: none;
+    margin: 10px;
+}
+
+input[type="file"] {
+    display: none;
+}
+.inputFile {
+    background-color: #5e35b1;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    padding: 6px 18px;
+    border: none;
+}
+.inputColor::-webkit-color-swatch-wrapper {
+    padding: 0;
+}
+.inputColor::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+.inputColor {
+    width: 80px;
+    height: 80px;
+    border: none;
+    outline: none;
+    -webkit-appearance: none;
+    border-radius: 100%;
+    border: 1px solid #ccc;
+}
+.textColor {
+    background-color: #ccc;
+}
+.color-picker-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+    max-width: 400px;
+    justify-content: space-between;
+}
+.cor {
+    width: 100%;
+    justify-content: space-around;
+}
+.color-title {
+    margin: 5px 0;
+}
+.color-text {
+    border: 1px solid #ccc;
+    padding: 8px;
+    width: 100px;
+    text-align: center;
+    margin-top: 10px;
+}
+.color-text:focus {
+    border: 1px solid #ccc;
+}
+textarea {
+    font-size: 16px;
+    resize: none;
+    padding: 8px;
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    max-height: 111px;
+}
+textarea:focus{
+    outline: 0;
+}
+.container .edit .cancel{
+    color: #212529;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+}
+/* IMAGE */
+.image-header {
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+}
+.image-preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-preview label {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.image-preview img {
+    height: 150px;
+}
+.description {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    margin: 0 5px;
+    margin-top: 3px;
+}
+/* TABLE */
+table {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+td {
+    padding: 8px;
+}
+tr {
+    border-bottom: 1px solid #ccc;
+}
+table i {
+    color: black;
+}
+.FirstRow {
+    background-color: #212529;
+    color: white;
+}
+.TextAlignCenter {
+    text-align: center;
+}
+.singleRow{
+    width: 100%;
+}
+.tokenRow{
+    display: none;
+}
+
+/* GROUPS*/
+.group-text {
+    margin: 20px 0;
+}
+.group-input {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.group-input label{
+    padding: 8px;
+}
+
+.box{
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+/* ADD/EDIT */
+.edit{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit .content{
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.edit input[type=text]{
+    width: 400px;
+    padding: 8px 16px;
+}
+
+.edit .btn {
+    justify-content: center;
+}
+.edit .img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.edit input[type=submit]{
+    max-width: 200px;
+}
+/* RESPONSE */
+
+@media screen and (max-width: 1080px) {
+    .content {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .group-input{
+        width: 100%;
+    }
+}

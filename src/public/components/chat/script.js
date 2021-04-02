@@ -2,6 +2,12 @@ $(() => {
 
     var socket = io('192.168.1.100:5000')
     var user = { src: 'client' }
+    var chat = $('.content')
+
+    chat.hide()
+    $('.chat-title').click(function () {
+        chat.slideToggle(500)
+    })
 
     $('form').on('submit', function () {
         event.preventDefault()
@@ -16,7 +22,6 @@ $(() => {
             send(msg)
         }
     })
-
 
     function message(msg, from = null) {
         if (msg !== '') {
@@ -37,7 +42,6 @@ $(() => {
 
     }
 
-
     function send(msg) {
         let data = {
             from: 'admin',
@@ -54,6 +58,22 @@ $(() => {
     })
 
 })
+
+function auto_grow(element) {
+    element.style.height = '5px'
+    element.style.height = (element.scrollHeight) + "px";
+    if (element.scrollHeight > 111) {
+        $(() => {
+            $('.chat-input textarea').addClass('overflow')
+            $('.chat-input textarea').removeClass('noOverflow')
+        })
+    } else {
+        $(() => {
+            $('.chat-input textarea').addClass('noOverflow')
+            $('.chat-input textarea').removeClass('overflow')
+        })
+    }
+}
 
 
 

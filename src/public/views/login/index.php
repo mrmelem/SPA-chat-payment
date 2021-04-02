@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="<?php echo PUBLIC_STYLES ?>login.css">
+<link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>src/public/views/login/style.css">
 
 <section class="login">
     <div class="form">

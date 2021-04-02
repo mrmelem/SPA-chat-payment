@@ -1,0 +1,34 @@
+main {
+    min-height: calc(100vh - 106px);
+}
+.main-banner {
+    height: calc(40vh - 72.94px);
+
+    background-color: #757d89;
+    text-align: center;
+    position: relative;
+}
+
+.main-banner p {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.main-banner p span {
+    color: white;
+    font-size: 35px;
+}
+
+.icons {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icons i {
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.5);
+}

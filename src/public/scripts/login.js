@@ -1,4 +1,3 @@
-
 $('button').click(function () {
     event.preventDefault();
     ident = $(this).attr('id')

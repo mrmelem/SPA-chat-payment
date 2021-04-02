@@ -1,0 +1,50 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    padding: 8px;
+}
+
+.footer-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.footer-btn a,
+.footer-btn p {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+    width: 50%;
+}
+.footer-btn a {
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+footer p {
+    color: white;
+    font-size: 13px;
+    cursor: default;
+    text-align: center;
+}
+
+footer a {
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.vl {
+    height: 50px;
+    width: 5px;
+    text-align: center;
+}

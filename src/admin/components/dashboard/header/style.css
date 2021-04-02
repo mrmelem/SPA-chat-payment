@@ -1,0 +1,36 @@
+header {
+    background-color: white;
+}
+.header-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+}
+.header-content > div {
+    margin: 0 10px;
+}
+.header-content > .loggout,
+.header-content > .user {
+    padding: 8px;
+    border-radius: 50%;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+    text-align: center;
+}
+.header-content > .user {
+    border: 2px solid rgba(0, 0, 0, 0.1);
+}
+.header-content > .loggout > i {
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.3);
+}
+.header-content > .loggout:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}

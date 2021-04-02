@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ccc;
+}
+
+textarea:focus,
+input:focus,
+button:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+
+.center {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2%;
+}
+.center-1080 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 2%;
+}

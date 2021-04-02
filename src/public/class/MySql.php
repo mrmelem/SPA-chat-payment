@@ -62,7 +62,18 @@ class MySql
         }
     }
 
-    public static function deleteById($table, $token)
+    public static function deleteById($table, $id)
+    {
+        try {
+            $pdo = MySql::conectar()->prepare("DELETE FROM `" . $table . "` WHERE `id`=? ");
+            $pdo->execute(array($id));
+            return true;
+        } catch (Exception $e) {
+            return $e;
+        }
+    }
+    
+    public static function deleteByToken($table, $token)
     {
         try {
             $pdo = MySql::conectar()->prepare("DELETE FROM `" . $table . "` WHERE `token`=? ");
@@ -134,5 +145,23 @@ class MySql
         }
 
         return $certo;
+    }
+
+    public static function selectByRef($table, $ref)
+    {
+        $sql = MySql::conectar()->prepare("SELECT * FROM `" . $table . "` WHERE `ref`=?");
+        $sql->execute(array($ref));
+        return $sql->fetchAll();
+    }
+
+    public static function checkByRef($table, $ref)
+    {
+        $sql = MySql::conectar()->prepare("SELECT * FROM `" . $table . "` WHERE `ref`=?");
+
+        $sql->execute(array($ref));
+        if ($sql->rowCount() != 0)
+            return true;
+        else
+            return false;
     }
 }

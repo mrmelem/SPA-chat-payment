@@ -7,7 +7,7 @@
 <main>
     <?php
     if (isset($_GET['action'])) {
-        if ($_GET['action'] == 'new' || $_GET['action'] = 'edit') {
+        if ($_GET['action'] == 'new' || $_GET['action'] == 'edit' || $_GET['action'] == 'delete') {
             if (file_exists('src/admin/views/user/add.php')) {
                 include('src/admin/views/user/add.php');
             } else {

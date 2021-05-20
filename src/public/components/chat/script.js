@@ -1,5 +1,5 @@
 $(() => {
-
+/*
     var socket = io('192.168.1.100:5000')
     var user = { src: 'client' }
     var chat = $('.content')
@@ -13,6 +13,7 @@ $(() => {
         event.preventDefault()
         let msg = $('#input-msg').val()
         send(msg)
+        alert("Teste")
     })
 
     $(document).keypress(function (e) {
@@ -47,7 +48,7 @@ $(() => {
             from: 'admin',
             msg: msg
         }
-        socket.emit('sendMessage_client', data)
+        socket.emit('send_client_from_admin', data)
         message(msg)
     }
 
@@ -56,7 +57,7 @@ $(() => {
     socket.on('receivedMessage', data => {
         message(data.message, 'admin')
     })
-
+*/
 })
 
 function auto_grow(element) {

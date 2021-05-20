@@ -1,34 +1,196 @@
 main {
-    min-height: calc(100vh - 106px);
-}
-.main-banner {
-    height: calc(40vh - 72.94px);
-
-    background-color: #757d89;
-    text-align: center;
-    position: relative;
-}
-
-.main-banner p {
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-}
-
-.main-banner p span {
-    color: white;
-    font-size: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 480px;
+  position: relative;
 }
 
-.icons {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
+main .overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-.icons i {
-    font-size: 26px;
-    color: rgba(255, 255, 255, 0.5);
+main .container {
+  position: relative;
+  max-width: 718px;
+  max-height: 526px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+main .container .icone {
+  position: absolute;
+  bottom: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+}
+
+main .container .icone i {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+main .container .wanimation {
+  position: absolute;
+  top: 40%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 2%;
+}
+
+.services {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.services .container {
+  width: 100%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.services .container .icone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.services .container .icone i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 26px;
+  width: 40px;
+  height: 40px;
+}
+
+.services .container .service-single {
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 15px;
+}
+
+.services .container .service-single .content {
+  text-align: left;
+}
+
+.services .container .service-single .content .description {
+  font-weight: normal;
+}
+
+.portfolio {
+  text-align: center;
+  background-color: #ccc;
+}
+
+.portfolio .container {
+  max-width: 1440px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.portfolio .container .container-single {
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.39);
+  box-shadow: 0px 0px 3px 1px rgba(0, 0, 0, 0.39);
+  margin: 0 auto;
+  width: 407px;
+  height: 474px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 7fr 3fr;
+  grid-template-rows: 7fr 3fr;
+}
+
+.portfolio .container .container-single .imagem {
+  height: 100%;
+}
+
+.services .container .service-single .content .description {
+  font-weight: normal;
+  font-size: 16px; /**/
+  color: #575757; /**/
+}
+
+.portfolio .container .container-single .content {
+  height: 100%;
+  font-family: "Montserrat", sans-serif;
+}
+.portfolio .container .container-single .content .title {
+  margin-top: 20px;
+}
+.portfolio .container .container-single .content .description {
+  margin-top: 15px;
+  font-weight: normal;
+}
+
+section {
+  padding-top: 20px;
+}
+
+section .container {
+  padding: 20px 0;
 }

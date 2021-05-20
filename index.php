@@ -47,7 +47,6 @@ if ($url == 'dashboard') {
         header('Location:' . INCLUDE_PATH);
     }
 } else {
-
     if (file_exists('src/public/views/' . $url . '/index.php')) {
         include('src/public/views/' . $url . '/index.php');
     } else {
@@ -55,3 +54,9 @@ if ($url == 'dashboard') {
     }
 }
 include('src/public/components/defaults/footer.php');
+
+
+
+?>
+
+

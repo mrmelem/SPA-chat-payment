@@ -1,14 +1,14 @@
 <?php
-$data = MySql::selectAll('tb_home');
-
-foreach ($data as $key => $value) {
-    if ($value['container'] == 'color') {
-        $color = $value['content'];
-    }
-}
+$color = Styles::Color();
 ?>
 
 <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>src/public/components/footer/style.css">
+
+<style>
+    footer {
+        background-color: <?php echo $color['cor1'] ?>;
+    }
+</style>
 <footer>
     <div class="footer-btn center-1080">
         <p>Voltar ao topo</p>

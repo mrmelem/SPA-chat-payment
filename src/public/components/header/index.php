@@ -1,27 +1,25 @@
 <?php
-$data = MySql::selectAll('tb_home');
-
-foreach ($data as $key => $value) {
-    if ($value['container'] == 'color') {
-        $color = $value['content'];
-    }
-    if ($value['container'] == 'logo-header') {
-        $logo = $value['content'];
-        $color = explode("--!--", $color);
-        foreach ($color as $key => $value) {
-            $itens = explode('-->', $value);
-            $style[$itens[0]] = $itens[1];
-        }
-    }
-}
-
+$style = Styles::Color();
+$logo = Styles::Logo();
 ?>
 <link rel="stylesheet" href="<?php echo GLOBAL_STYLE ?>">
 <link rel="stylesheet" href="<?php echo INCLUDE_PATH ?>src/public/components/header/style.css">
-<nav>
-    <div class="center">
-        <div class="logo">
-            <img src="<?php echo INCLUDE_PATH ?>src/public/assets/<?php echo $logo ?>" alt="Simpliart">
-        </div>
+<style>
+    header{
+        background-color: <?php echo $style['cor1'] ?>;
+        max-height: 80px;
+    }
+</style>
+
+<div class="container">
+    <div class="logo">
+        <img src="<?php echo INCLUDE_PATH ?>src/public/assets/<?php echo $logo ?>" alt="" type="imagens/transparent-logo/jpeg">
     </div>
-</nav>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Serviços</li>
+            <li>Portfólio</li>
+        </ul>
+    </nav>
+</div>

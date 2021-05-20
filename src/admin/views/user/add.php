@@ -6,6 +6,8 @@ if (isset($_GET['action'])) {
         } else {
             header('Location:' . INCLUDE_PATH . 'dashboard/user');
         }
+    }else{
+        header('Location:' . INCLUDE_PATH . 'dashboard/user');
     }
 } else {
     header('Location:' . INCLUDE_PATH . 'dashboard/user');
@@ -26,7 +28,7 @@ if (isset($_POST['confirm'])) {
 if (isset($_POST['reject'])) {
     header('Location:' . INCLUDE_PATH . 'dashboard/user');
 }
-if (isset($_POST['edit'])){
+if (isset($_POST['edit'])) {
     // Verificar se houve alteração de senha
     // Se houver, verificar senha atual pra ver se tem autorização
     // Se houver, validar as duas senhas e verifiicar se contém os requisitos de 8 letras

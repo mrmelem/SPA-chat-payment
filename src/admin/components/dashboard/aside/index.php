@@ -39,13 +39,12 @@
                     <i class="rot fas fa-chevron-up"></i>
                 </div>
                 <div class="aside-group-list">
-                    <a class="nav" href="<?php echo INCLUDE_PATH ?>dashboard/user?action=new">Cadastrar</a>
                     <a class="nav" href="<?php echo INCLUDE_PATH ?>dashboard/user">Gerenciar permissões</a>
                 </div>
             </div>
+
         </div>
         <div class="aside-footer">
         </div>
     </div>
 </aside>
-
